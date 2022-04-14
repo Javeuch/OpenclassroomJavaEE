@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+
+	<servlet>
+		<servlet-name>Test</servlet-name>
+		<servlet-class>com.octest.servlets.Test</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Test</servlet-name>
+		<url-pattern>/bonjour</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Accueil</servlet-name>
+		<servlet-class>com.octest.servlets.Accueil</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Accueil</servlet-name>
+		<url-pattern>/</url-pattern>	<!-- directement le chemin racine -->
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ExemplesJSTL</servlet-name>
+		<servlet-class>com.octest.servlets.ExemplesJSTL</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ExemplesJSTL</servlet-name>
+		<url-pattern>/exemplesJSTL</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ExemplesBoucle</servlet-name>
+		<servlet-class>com.octest.servlets.ExemplesBoucle</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ExemplesBoucle</servlet-name>
+		<url-pattern>/exemplesBoucle</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ExempleLogin</servlet-name>
+		<servlet-class>com.octest.servlets.ExempleLogin</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ExempleLogin</servlet-name>
+		<url-pattern>/exempleLogin</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>LaSession</servlet-name>
+		<servlet-class>com.octest.servlets.LaSession</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>LaSession</servlet-name>
+		<url-pattern>/formulaireDeSession</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>LaSessionAvecGET</servlet-name>
+		<servlet-class>com.octest.servlets.LaSessionAvecGET</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>LaSessionAvecGET</servlet-name>
+		<url-pattern>/formulaireDeSessionAvecGET</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>LesCookies</servlet-name>
+		<servlet-class>com.octest.servlets.LesCookies</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>LesCookies</servlet-name>
+		<url-pattern>/lesCookies</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>TestBDD</servlet-name>
+		<servlet-class>com.octest.servlets.TestBDD</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>TestBDD</servlet-name>
+		<url-pattern>/testBDD</url-pattern>
+	</servlet-mapping>
+	
+	<!-- _____________________________Envoi de fichiers__________________________________ -->
+
+	<servlet>
+		<servlet-name>EnvoiDeFichier</servlet-name>
+		<servlet-class>com.octest.servlets.EnvoiDeFichier</servlet-class>
+		<multipart-config>
+			<location>/home/max/workspace-backend/workspace-javaee/openclassroomsJavaee/fichierstmp/	</location> <!-- A adapter chez vous -->
+			<max-file-size>10485760</max-file-size> <!-- 10 Mo -->
+			<max-request-size>52428800</max-request-size> <!-- 5 x 10 Mo -->
+			<file-size-threshold>1048576</file-size-threshold> <!-- 1 Mo -->
+		</multipart-config>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EnvoiDeFichier</servlet-name>
+		<url-pattern>/envoiDeFichier</url-pattern>
+	</servlet-mapping>
+	<!-- _____________________________ /Envoi de fichiers ________________________________-->
+
+
+
+	<!-- Configuration de la JSTL -->
+	<jsp-config>
+		<jsp-property-group>
+			<url-pattern>*.jsp</url-pattern>
+			<include-prelude>/WEB-INF/taglibs.jsp</include-prelude>
+		</jsp-property-group>
+	</jsp-config>
+
+</web-app>

@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+/home/max/workspace-backend/workspace-javaee/openclassroomsJavaee/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+864367499.index
+1427606107.index
+350605230.index
+2089348824.index
+3166076078.index
+996119744.index
+3980549892.index

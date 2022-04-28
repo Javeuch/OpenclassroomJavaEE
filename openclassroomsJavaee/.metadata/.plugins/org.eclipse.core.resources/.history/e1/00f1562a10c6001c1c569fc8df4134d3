@@ -1,0 +1,12 @@
+package com.octest.dao;
+
+import java.util.List;
+
+import com.octest.beans.Utilisateur;
+
+public interface UtilisateurDao {
+
+	// Les 2 méthodes, juste énoncées et qui sont implémentées dans la Classe "UtilisateurDaoImpl"
+    void ajouter( Utilisateur utilisateur );
+    List<Utilisateur> lister();
+}

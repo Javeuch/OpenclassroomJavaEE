@@ -1,0 +1,5 @@
+package com.octest.dao;
+
+public class DaoFactory {
+
+}

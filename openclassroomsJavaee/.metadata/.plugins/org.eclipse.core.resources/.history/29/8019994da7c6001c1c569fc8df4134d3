@@ -1,0 +1,33 @@
+package com.octest.beans;
+
+public class Utilisateur {
+	private String nom;
+	private String prenom;
+
+	public String getNom() {
+		return nom;
+	}
+
+	// Le formulaire affichera une exception si prénom a plus de 10 caractères
+	public void setNom(String nom) throws BeanException {
+		if (nom.length() > 10) {
+			throw new BeanException("Le Nom est trop grand ! (10 caractères maximum)");
+		} else if (nom.length() == 0) {
+			throw new BeanException("Le champs nom n'a pas été  complété !");
+		}
+
+		this.nom = nom;
+	}
+
+	public String getPrenom() {
+		return prenom;
+	}
+
+	public void setPrenom(String prenom) throws BeanException {
+		if (prenom.length() == 0) {
+			throw new BeanException("Le champs Prénom n'a pas été  complété !");
+			}else {
+		this.prenom = prenom;
+			}
+	}
+}

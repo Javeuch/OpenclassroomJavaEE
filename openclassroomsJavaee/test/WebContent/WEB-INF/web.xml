@@ -86,12 +86,32 @@
 	
 	<servlet>
 		<servlet-name>TestBDD</servlet-name>
-		<servlet-class>com.octest.servlets.TestBDD</servlet-class>
+		<servlet-class>com.octest.servlets.TestBDD</servlet-class>ls
 	</servlet>
 
 	<servlet-mapping>
 		<servlet-name>TestBDD</servlet-name>
 		<url-pattern>/testBDD</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>TestDAO</servlet-name>
+		<servlet-class>com.octest.servlets.TestDAO</servlet-class>ls
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>TestDAO</servlet-name>
+		<url-pattern>/testDAO</url-pattern>
+	</servlet-mapping>
+	
+		<servlet>
+		<servlet-name>TestErreurDAO</servlet-name>
+		<servlet-class>com.octest.servlets.TestErreurDAO</servlet-class>ls
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>TestErreurDAO</servlet-name>
+		<url-pattern>/testErreurDAO</url-pattern>
 	</servlet-mapping>
 	
 	<!-- _____________________________Envoi de fichiers__________________________________ -->
